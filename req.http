@@ -1,0 +1,37 @@
+### Get all books
+GET http://localhost:8080/api/books
+Accept: application/json
+
+###
+
+### Get a book by ISBN
+GET http://localhost:8080/api/books/1234567890
+Accept: application/json
+
+###
+
+### Create a new book
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "isbn": "1234567890",
+  "title": "Clean Code",
+  "author": "Robert C. Martin"
+}
+
+###
+
+### Update a book by ISBN
+PUT http://localhost:8080/api/books/1234567890
+Content-Type: application/json
+
+{
+  "title": "Clean Code: Updated Edition",
+  "author": "Robert Martin"
+}
+
+###
+
+### Delete a book by ISBN
+DELETE http://localhost:8080/api/books/1234567890
